@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>How to get down with DHTMLX 3.5 the zippy way</title>
+		<!-- DHTMLX CSS -->
+		<link rel="stylesheet" href="js/dhtmlx/codebase/dhtmlx.css" />
+		<!-- DHTMLX library -->
+		<script type="text/javascript" src="js/dhtmlx/codebase/dhtmlx.js"></script>
+		<!-- JQUERY library -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<!-- ZIPPYDHX library -->
+		<script type="text/javascript" src="js/application/lib/zippydhx.js"></script>
+				
+		
+		<script>
+			var myapp = {};
+			
+			$(function(){
+				
+				var myApp = new zippy.application(6,false); // myApp.Header, myApp.Body, myApp.Menu
+	
+				myApp.Menu.setWidth(200);
+				
+				var toolbarItems = { align: "right",
+	                items: [
+	                      { type: "separator" }
+	                    , { type: "button", text: "button", callback: function(){ alert('hi'); }}
+	                    , { type: "separator" }
+	                    , { type: "datepicker", text: "Date:", callback: function(val){ alert(val);  } }
+	                  ]
+	            };
+				
+				var toolbar = new zippy.toolbar(myApp.Menu,toolbarItems);
+				// toolbar.addButton('test', 0, 'test', null, null);
+			});
+			
+		</script>
+		
+	</head>
+
+	<body>
+	</body>
+</html>
